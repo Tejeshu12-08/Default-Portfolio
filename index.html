@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>RED.LOCK | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet"/>
+<!-- Link to external stylesheet -->
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div id="cursor-ring"></div>
+<div id="cursor-dot"></div>
+
+
+<!-- ─── PARTICLES ─── -->
+<canvas id="particles"></canvas>
+
+<!-- ═══════════════════════════════════════════════════════
+     NAVBAR
+     ═══════════════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-brand">RED.<em>LOCK</em></div>
+  <div class="nav-links">
+    <a href="#about"      class="nav-a">About</a>
+    <a href="#skills"     class="nav-a">Skills</a>
+    <a href="#projects"   class="nav-a">Projects</a>
+    <a href="#certs"      class="nav-a">Certs</a>
+    <a href="#experience" class="nav-a">XP</a>
+    <a href="#contact"    class="nav-a">Contact</a>
+
+  </div>
+  <button class="hamburger" id="hbg" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-nav" id="mob-nav">
+  <a href="#about"        onclick="closeMob()">About</a>
+  <a href="#skills"       onclick="closeMob()">Skills</a>
+  <a href="#projects"     onclick="closeMob()">Projects</a>
+  <a href="#certs"        onclick="closeMob()">Certs</a>
+  <a href="#experience"   onclick="closeMob()">Experience</a>
+  <a href="#contact"      onclick="closeMob()">Contact</a>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     ABOUT / HERO
+     ═══════════════════════════════════════════════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="about-wrap">
+
+      <!-- Profile image -->
+      <div class="profile-shell reveal">
+        <div class="profile-ring"></div>
+        <div class="profile-hex">
+          <img src="profile.webp" alt="Profile Image" class="profile-img">
+          <svg viewBox="0 0 100 100" fill="none">
+            <circle cx="50" cy="34" r="20" fill="#00ffe5" opacity=".2"/>
+            <ellipse cx="50" cy="78" rx="30" ry="14" fill="#00ffe5" opacity=".12"/>
+            <circle cx="50" cy="34" r="14" fill="#00ffe5" opacity=".3"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="about-text reveal" style="transition-delay:.15s">
+        <span class="badge">// STATUS: ONLINE</span>
+        <h1>TEJESH.U<br/><span class="c"></span></h1>
+
+        <!-- Typing animation -->
+        <div class="about-typed">
+          &gt;&nbsp;<span id="atyped"></span><span class="typed-cur"></span>
+        </div>
+
+        <p class="about-bio">
+          <strong>Aspiring Ethical Hacker</strong> with a passion for breaking systems to secure them.
+          Specializing in web application security, network penetration testing, and vulnerability research.
+          Active bug bounty hunter with findings on major platforms. CTF competitor and open-source contributor.
+        </p>
+
+        <div class="about-actions">
+         <a href="resume.html"  class="gbtn"><span>&gt; View Resume</span></a>
+          <a href="#contact"  class="gbtn g"><span>&gt; Hire Me</span></a>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat">
+            <span class="stat-num">0+</span>
+            <span class="stat-lbl">Bugs Found</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">40+</span>
+            <span class="stat-lbl">Tryhackme Rooms</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">3</span>
+            <span class="stat-lbl">Projects</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">4</span>
+            <span class="stat-lbl">Certs</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     SKILLS
+     ═══════════════════════════════════════════════════════ -->
+<section id="skills">
+  <div class="container">
+    <div class="sh reveal">
+      <span class="sh-tag">// 01 · capabilities</span>
+      <h2 class="sh-title">Skills & Tools</h2>
+      <div class="sh-line"></div>
+    </div>
+
+    <div class="skills-layout">
+
+      <!-- Networking -->
+      <div class="skill-group reveal">
+        <div class="sg-head">
+          <span class="sg-icon">📡</span>
+          <span class="sg-title">Networking</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span>TCP/IP & Protocols</span><span>90%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-w="90"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span>Network Scanning</span><span>88%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-w="88"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span>Packet Analysis</span><span>82%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-w="82"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span>Wireless Security</span><span>50%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-w="50"></div></div>
+        </div>
+      </div>
+
+      <!-- Web Security -->
+      <div class="skill-group reveal" style="transition-delay:.1s">
+        <div class="sg-head">
+          <span class="sg-icon">🕸</span>
+          <span class="sg-title">Web Security</span>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span>OWASP Top 10</span><span>94%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-w="94"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span>SQL Injection</span><span>91%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-w="91"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span>XSS & CSRF</span><span>88%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-w="88"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span>API Security</span><span>80%</span></div>
+          <div class="skill-track"><div class="skill-fill" data-w="80"></div></div>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="skill-group reveal" style="transition-delay:.2s">
+        <div class="sg-head">
+          <span class="sg-icon">⚙️</span>
+          <span class="sg-title">Tools</span>
+        </div>
+        <div class="tool-badges">
+          <span class="tb">Burp Suite</span>
+          <span class="tb">Nmap</span>
+          <span class="tb">Wireshark</span>
+          <span class="tb">Metasploit</span>
+          <span class="tb">SQLMap</span>
+          <span class="tb">Amass</span>
+          <span class="tb">Subfinder</span>
+          <span class="tb">Hydra</span>
+          <span class="tb">Hashcat</span>
+          <span class="tb">John</span>
+          <span class="tb">Gobuster</span>
+          <span class="tb">Kali Linux</span>
+          <span class="tb">Python</span>
+          <span class="tb">Bash</span>
+          <span class="tb">Git</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     PROJECTS
+     ═══════════════════════════════════════════════════════ -->
+<section id="projects">
+  <div class="container">
+    <div class="sh reveal">
+      <span class="sh-tag">// 02 · work</span>
+      <h2 class="sh-title">Projects</h2>
+      <div class="sh-line"></div>
+    </div>
+
+    <div class="proj-grid">
+
+      <div class="proj-card reveal">
+        <div class="proj-thumb">
+          <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="8" width="40" height="32" rx="2" stroke="#00ffe5" stroke-width="1.5"/><path d="M4 16h40" stroke="#00ffe5" stroke-width="1.5"/><circle cx="10" cy="12" r="1.5" fill="#ff3b5c"/><circle cx="15" cy="12" r="1.5" fill="#ffc23e"/><circle cx="20" cy="12" r="1.5" fill="#00ff88"/></svg>
+          <span class="proj-thumb-label">// screenshot placeholder</span>
+        </div>
+        <div class="proj-body">
+          <span class="proj-cat">Web Sec</span>
+          <div class="proj-name">OWASP Juice Shop Pentest</div>
+          <div class="proj-desc">Full penetration test of OWASP Juice Shop. Documented SQL Injection, XSS, IDOR, broken auth, and SSRF vectors with PoC exploits and remediation steps.</div>
+          <div class="proj-tools">
+            <span class="tb">Burp Suite</span><span class="tb">SQLMap</span>
+            <span class="tb">ZAP</span><span class="tb">Python</span>
+          </div>
+          <div class="proj-foot">
+            <a href="#" class="gbtn"><span>View Details</span></a>
+            <a href="#" class="gbtn g"><span>GitHub</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card reveal" style="transition-delay:.1s">
+        <div class="proj-thumb">
+          <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="#00ff88" stroke-width="1.5"/><path d="M24 8v4M24 36v4M8 24h4M36 24h4" stroke="#00ff88" stroke-width="1.5"/><circle cx="24" cy="24" r="4" fill="#00ff88" opacity=".3"/></svg>
+          <span class="proj-thumb-label">// screenshot placeholder</span>
+        </div>
+        <div class="proj-body">
+          <span class="proj-cat">Recon</span>
+          <div class="proj-name">AutoRecon Framework</div>
+          <div class="proj-desc">Python-based recon pipeline — subdomain enumeration, port discovery, HTTP probing, and screenshot capture. Outputs structured JSON reports with severity tagging.</div>
+          <div class="proj-tools">
+            <span class="tb">Python</span><span class="tb">Amass</span>
+            <span class="tb">Subfinder</span><span class="tb">httpx</span>
+          </div>
+          <div class="proj-foot">
+            <a href="#" class="gbtn"><span>View Details</span></a>
+            <a href="#" class="gbtn g"><span>GitHub</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card reveal" style="transition-delay:.2s">
+        <div class="proj-thumb">
+          <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="20" width="32" height="16" rx="2" stroke="#4d7cff" stroke-width="1.5"/><path d="M16 20v-4a8 8 0 0116 0v4" stroke="#4d7cff" stroke-width="1.5"/><circle cx="24" cy="28" r="3" fill="#4d7cff" opacity=".4"/></svg>
+          <span class="proj-thumb-label">// screenshot placeholder</span>
+        </div>
+        <div class="proj-body">
+          <span class="proj-cat">Network</span>
+          <div class="proj-name">Multi-threaded Port Scanner</div>
+          <div class="proj-desc">Custom Python port scanner with OS fingerprinting, banner grabbing, and service detection. 10× faster than sequential scanning with JSON + HTML reporting.</div>
+          <div class="proj-tools">
+            <span class="tb">Python</span><span class="tb">Socket</span>
+            <span class="tb">Threading</span>
+          </div>
+          <div class="proj-foot">
+            <a href="#" class="gbtn"><span>View Details</span></a>
+            <a href="#" class="gbtn g"><span>GitHub</span></a>
+          </div>
+        </div>
+      </div>
+
+      
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     CERTIFICATES
+     ═══════════════════════════════════════════════════════ -->
+<section id="certs">
+  <div class="container">
+    <div class="sh reveal">
+      <span class="sh-tag">// 03 · credentials</span>
+      <h2 class="sh-title">Certificates</h2>
+      <div class="sh-line"></div>
+    </div>
+
+    <div class="cert-grid">
+
+      <div class="cert-card reveal"  onclick="openCert('cybersecurity.jpg')">
+        <div class="cert-img">
+            <img src="cybersecurity.jpg" alt="Introduction to Cybersecurity Certificate">
+        </div>
+        <div class="cert-body">
+          <div class="cert-title">Introduction to Cybersecurity</div>
+          <div class="cert-issuer">CISCO Networking Academy</div>
+          <div class="cert-date">Issued: Jun 2025 </div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal" style="transition-delay:.2s" onclick="openCert('packetracer.jpg')">
+        <div class="cert-img">
+            <img src="packetracer.jpg" alt="Cisco packet tracer certificate">
+        </div>
+        <div class="cert-body">
+          <div class="cert-title">CISCO Packet Tracer</div>
+          <div class="cert-issuer">CISCO Networking Academy</div>
+          <div class="cert-date">Issued: Nov 2025 </div>
+        </div>
+      </div>
+
+       <div class="cert-card reveal" style="transition-delay:.1s"onclick="openCert('networking-basics.jpg')">
+        <div class="cert-img">
+        <img src="networking-basics.jpg" alt="Networking Basics Certificate">
+        </div>
+        <div class="cert-body">
+          <div class="cert-title">Networking Basics</div>
+          <div class="cert-issuer">CISCO Networking Academy</div>
+          <div class="cert-date">Issued: Dec 2025</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal" style="transition-delay:.3s" onclick="openCert('deloitte.jpg')">
+        <div class="cert-img">
+            <img src="deloitte.jpg" alt="Deloitte Australia Certificate">
+        </div>
+        <div class="cert-body">
+          <div class="cert-title">Deloitte Australia</div>
+          <div class="cert-issuer">Cyber Job simulation</div>
+          <div class="cert-date">Issued: 2026 </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     EXPERIENCE
+     ═══════════════════════════════════════════════════════ -->
+<section id="experience">
+  <div class="container">
+    <div class="sh reveal">
+      <span class="sh-tag">// 04 · history</span>
+      <h2 class="sh-title">Experience</h2>
+      <div class="sh-line"></div>
+    </div>
+
+    <div class="tl">
+
+      
+      <div class="tl-item reveal" style="transition-delay:.1s">
+        <div class="tl-dot g"></div>
+        <div class="tl-meta">
+          <span class="tl-date">JUN 2023 — DEC 2023</span>
+          <span class="tl-type">Internship</span>
+        </div>
+        <div class="tl-role">Ethical Hacking Intern</div>
+        <span class="tl-org">Edu tantr, Bangalore|Remote </span>
+        <div class="tl-desc">Worked with tools like Nmap for network scanning and enumeration. Developed understanding of cybersecurity concepts including vulnerabilities and system security practices.</div>
+      </div>
+
+      <div class="tl-item reveal" style="transition-delay:.2s">
+        <div class="tl-dot b"></div>
+        <div class="tl-meta">
+          <span class="tl-type">CTF</span>
+        </div>
+        <div class="tl-role">CTF consistently </div>
+        <span class="tl-org">Pico CTF</span>
+        <div class="tl-desc">Completing categories like Web exploitation, Cryptography, Forensics </div>
+      </div>
+
+
+      <div class="tl-item reveal" style="transition-delay:.4s">
+        <div class="tl-dot g"></div>
+        <div class="tl-meta">
+          <span class="tl-type">Tryhackme </span>
+        </div>
+        <div class="tl-role">Tryhackme Top 15%</div>
+        <span class="tl-org">Security Research Lab</span>
+        <div class="tl-desc">Practiced tools and techniques such as network scanning, enumeration, and basic web exploitation. Strengthened problem-solving skills through consistent CTF-style challenges and guided learning paths.”</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     CONTACT
+     ═══════════════════════════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="sh reveal">
+      <span class="sh-tag">// 05 · connect</span>
+      <h2 class="sh-title">Contact</h2>
+      <div class="sh-line"></div>
+    </div>
+
+    <div class="contact-wrap">
+
+      <div class="contact-left reveal">
+        <h3>[ INITIATE CONNECTION ]</h3>
+        <p>Available for freelance pentesting, bug bounty collaborations, security consulting, and internship opportunities. Let's connect and make the web safer together.</p>
+
+        <div class="contact-meta">
+          <span class="k">$</span> <span class="v">email</span>: utejesh03@gmail.com<br/>
+          <span class="k">$</span> <span class="v">location</span>: Chennai, Tamil Nadu, India<br/>
+          <span class="k">$</span> <span class="v">status</span>: <span style="color:var(--neon2)">AVAILABLE_FOR_HIRE</span><br/>
+          <span class="k">$</span> <span class="v">response_time</span>: &lt; 24 hours
+        </div>
+        
+        <div class="social-row">
+          <a href="https://github.com/Tejeshu12-08" class="social-btn">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58 0-.28-.01-1.03-.02-2.03-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 013-.4c1.02.01 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22 0 1.6-.01 2.9-.01 3.29 0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/tejesh-u-12080717vba/" class="social-btn">
+            <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.59 0 4.25 2.36 4.25 5.44v6.3zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM6.9 20.45H3.8V9h3.1v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            LinkedIn
+          </a>
+          <a href="#" class="social-btn">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.08 3.16 9.43 7.63 11.19-.11-.93-.2-2.36.04-3.37.22-.92 1.49-6.31 1.49-6.31s-.38-.76-.38-1.89c0-1.77 1.03-3.09 2.3-3.09 1.09 0 1.61.82 1.61 1.8 0 1.1-.7 2.74-1.06 4.26-.3 1.27.63 2.31 1.88 2.31 2.26 0 3.78-2.91 3.78-6.35 0-2.62-1.77-4.58-4.97-4.58-3.62 0-5.88 2.7-5.88 5.72 0 1.04.3 1.77.77 2.33.22.26.25.36.17.66-.06.21-.18.73-.24.93-.08.3-.31.4-.57.29-1.61-.66-2.36-2.43-2.36-4.41 0-3.27 2.76-7.2 8.25-7.2 4.41 0 7.32 3.2 7.32 6.64 0 4.55-2.52 7.96-6.22 7.96-1.24 0-2.41-.67-2.81-1.42l-.78 2.99c-.24.91-.72 1.82-1.15 2.54.87.26 1.78.4 2.73.4 6.63 0 12-5.37 12-12S18.63 0 12 0z"/></svg>
+            HackerOne
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact form -->
+      <div class="cf reveal" style="transition-delay:.15s">
+        <div class="cf-head">
+          <div class="cf-dot" style="background:#ff5f57"></div>
+          <div class="cf-dot" style="background:#febc2e"></div>
+          <div class="cf-dot" style="background:#28c840"></div>
+          <span style="margin-left:.5rem">// SECURE_CHANNEL — TLS 1.3</span>
+        </div>
+        <form class="cf-body" id="contact-form" action="https://formspree.io/f/xvzdgoaj" method="POST">
+          <input type="text" name="_gotcha" style="display:none">
+          <div class="cf-group">
+            <label class="cf-label">NAME</label>
+            <input class="cf-input" type="text" name="name" placeholder="your_handle" required>
+          </div>
+          <div class="cf-group">
+            <label class="cf-label">EMAIL</label>
+            <input class="cf-input" type="email" name="email" placeholder="you@domain.com" required>
+          </div>
+          <div class="cf-group">
+            <label class="cf-label">MESSAGE</label>
+            <textarea class="cf-area" name="message" placeholder="your message..." required></textarea>
+          </div>
+         <button class="cf-btn" type="submit">
+  <span>&gt; TRANSMIT</span>
+</button>
+</form>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<div id="certModal" class="modal">
+
+  <!-- Close button -->
+  <span class="close" onclick="closeCert()">&times;</span>
+
+  <!-- IMAGE instead of iframe -->
+  <img id="certImage">
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════════ -->
+<footer>
+  <p>&copy; <span id="yr"></span> <strong>Tejesh U</strong> // RED.LOCK &nbsp;·&nbsp; Built with caffeine &amp; curiosity &nbsp;·&nbsp; <strong>Stay ethical.</strong></p>
+</footer>
+
+<a href="#about" class="btt" id="btt" aria-label="Back to top">↑</a>
+
+<!-- ═══════════════════════════════════════════════════════
+     SCRIPTS
+     ═══════════════════════════════════════════════════════ -->
+<script>
+
+
+const form = document.getElementById("contact-form");
+const btn = document.querySelector(".cf-btn span");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  btn.textContent = "> SENDING...";
+
+  const data = new FormData(form);
+
+  const res = await fetch(form.action, {
+    method: "POST",
+    body: data,
+    headers: { "Accept": "application/json" }
+  });
+
+  if (res.ok) {
+    btn.textContent = "> DELIVERED ✓";
+    form.reset();
+
+    setTimeout(() => {
+      btn.textContent = "> TRANSMIT";
+    }, 2000);
+  } else {
+    btn.textContent = "> ERROR!";
+  }
+});
+
+
+  window.onclick = function(e) {
+  let modal = document.getElementById("certModal");
+
+  if (e.target === modal) {
+    closeCert();
+  }
+}
+function openCert(file) {
+  document.getElementById("certModal").style.display = "block";
+  document.getElementById("certImage").src = file;
+}
+
+function closeCert() {
+  document.getElementById("certModal").style.display = "none";
+  document.getElementById("certImage").src = "";
+}
+
+
+/* ───────────────────────────────────────────────────────
+   CUSTOM CURSOR
+   ─────────────────────────────────────────────────────── */
+(function(){
+  const ring = document.getElementById('cursor-ring');
+  const dot  = document.getElementById('cursor-dot');
+  let rx=0,ry=0,mx=0,my=0;
+
+  document.addEventListener('mousemove',e=>{ mx=e.clientX; my=e.clientY;
+    dot.style.left=mx+'px'; dot.style.top=my+'px';
+  });
+
+  function lerp(a,b,t){ return a+(b-a)*t }
+  function loop(){
+    rx=lerp(rx,mx,0.12); ry=lerp(ry,my,0.12);
+    ring.style.left=rx+'px'; ring.style.top=ry+'px';
+    requestAnimationFrame(loop);
+  }
+  loop();
+
+  document.querySelectorAll('a,button,.proj-card,.skill-group,.tool-card,.cert-card').forEach(el=>{
+    el.addEventListener('mouseenter',()=>document.body.classList.add('cursor-hover'));
+    el.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-hover'));
+  });
+})();
+
+/* ───────────────────────────────────────────────────────
+   PARTICLES CANVAS
+   ─────────────────────────────────────────────────────── */
+(function(){
+  const c   = document.getElementById('particles');
+  const ctx = c.getContext('2d');
+  let W,H,pts=[];
+
+  function resize(){ W=c.width=innerWidth; H=c.height=innerHeight; }
+  resize(); window.addEventListener('resize',resize);
+
+  for(let i=0;i<80;i++){
+    pts.push({
+      x:Math.random()*2000, y:Math.random()*2000,
+      vx:(Math.random()-.5)*.3, vy:(Math.random()-.5)*.3,
+      r:Math.random()*1.5+.5,
+      a:Math.random()
+    });
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    pts.forEach(p=>{
+      p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0)p.x=W; if(p.x>W)p.x=0;
+      if(p.y<0)p.y=H; if(p.y>H)p.y=0;
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(0,255,229,${p.a*.5})`;
+      ctx.fill();
+    });
+    // connect nearby particles
+    for(let i=0;i<pts.length;i++){
+      for(let j=i+1;j<pts.length;j++){
+        const dx=pts[i].x-pts[j].x, dy=pts[i].y-pts[j].y;
+        const d=Math.sqrt(dx*dx+dy*dy);
+        if(d<120){
+          ctx.beginPath();
+          ctx.moveTo(pts[i].x,pts[i].y);
+          ctx.lineTo(pts[j].x,pts[j].y);
+          ctx.strokeStyle=`rgba(0,255,229,${(.12*(1-d/120))})`;
+          ctx.lineWidth=.5;
+          ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ───────────────────────────────────────────────────────
+   ABOUT TYPING ANIMATION
+   ─────────────────────────────────────────────────────── */
+(function(){
+  const el = document.getElementById('atyped');
+  const words = [
+    'Aspiring Ethical Hacker',
+    'Breaking Systems to Secure Them',
+    'Bug Bounty Hunter',
+    'CTF Competitor',
+    'Security Researcher',
+  ];
+  let wi=0,ci=0,del=false;
+  function tick(){
+    const w=words[wi];
+    el.textContent = del ? w.slice(0,--ci) : w.slice(0,++ci);
+    if(!del && ci===w.length){ del=true; setTimeout(tick,1800); return }
+    if(del && ci===0){ del=false; wi=(wi+1)%words.length }
+    setTimeout(tick, del?55:90);
+  }
+  setTimeout(tick,1200);
+})();
+
+/* ───────────────────────────────────────────────────────
+   SCROLL REVEAL
+   ─────────────────────────────────────────────────────── */
+(function(){
+  const els=document.querySelectorAll('.reveal');
+  const ob=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('vis'); ob.unobserve(e.target) } });
+  },{threshold:.1});
+  els.forEach(el=>ob.observe(el));
+})();
+
+/* ───────────────────────────────────────────────────────
+   SKILL BAR FILL
+   ─────────────────────────────────────────────────────── */
+(function(){
+  const fills=document.querySelectorAll('.skill-fill');
+  const ob=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.style.width=e.target.dataset.w+'%'; ob.unobserve(e.target) } });
+  },{threshold:.3});
+  fills.forEach(f=>ob.observe(f));
+})();
+
+/* ───────────────────────────────────────────────────────
+   ACTIVE NAV HIGHLIGHT
+   ─────────────────────────────────────────────────────── */
+(function(){
+  const sections=document.querySelectorAll('section[id]');
+  const navAs=document.querySelectorAll('.nav-a');
+  const ob=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        navAs.forEach(a=>a.classList.remove('active'));
+        const active=document.querySelector(`.nav-a[href="#${e.target.id}"]`);
+        if(active) active.classList.add('active');
+      }
+    });
+  },{threshold:.4});
+  sections.forEach(s=>ob.observe(s));
+})();
+
+
+
+/* ───────────────────────────────────────────────────────
+   BACK TO TOP
+   ─────────────────────────────────────────────────────── */
+const btt=document.getElementById('btt');
+window.addEventListener('scroll',()=>btt.classList.toggle('vis',scrollY>400));
+
+/* ───────────────────────────────────────────────────────
+   HAMBURGER
+   ─────────────────────────────────────────────────────── */
+function closeMob(){
+  document.getElementById('hbg').classList.remove('open');
+  document.getElementById('mob-nav').classList.remove('open');
+}
+document.getElementById('hbg').addEventListener('click',function(){
+  this.classList.toggle('open');
+  document.getElementById('mob-nav').classList.toggle('open');
+});
+
+/* ───────────────────────────────────────────────────────
+   FOOTER YEAR
+   ─────────────────────────────────────────────────────── */
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* ───────────────────────────────────────────────────────
+   CONTACT FORM
+   ─────────────────────────────────────────────────────── */
+(function(){
+  const btn=document.getElementById('cf-submit');
+  const txt=document.getElementById('cf-btn-txt');
+  btn.addEventListener('click',()=>{
+    txt.textContent='> ENCRYPTING...';
+    setTimeout(()=>txt.textContent='> TRANSMITTING...',700);
+    setTimeout(()=>{
+      txt.textContent='> DELIVERED ✓';
+      btn.style.cssText='color:#000;background:var(--neon2);border-color:var(--neon2)';
+    },1500);
+    setTimeout(()=>{
+      txt.textContent='> TRANSMIT';
+      btn.style.cssText='';
+      ['cf-name','cf-email','cf-msg'].forEach(id=>document.getElementById(id).value='');
+    },3200);
+  });
+})();
+
+
+</script>
+</body>
+</html>
